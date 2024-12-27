@@ -1,0 +1,53 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="demo2.GuestWindow"
+        x:CompileBindings="False"
+        Title="GuestWindow">
+<DockPanel>
+           <StackPanel 
+               HorizontalAlignment="Center"
+               Orientation="Horizontal"
+               DockPanel.Dock="Top" 
+               Spacing="10"
+               Height="50">
+               <TextBox TextChanging="SearchTextBox_OnTextChanging" Width="200" x:Name="SearchTextBox"/>
+               <ComboBox VerticalAlignment="Center" Width="100" x:Name="SortComboBox" SelectionChanged="SortComboBox_OnSelectionChanged">
+                   <ComboBoxItem Content="Цена убывание"/>
+                   <ComboBoxItem Content="Цена возрастание"/>
+               </ComboBox>
+               <ComboBox VerticalAlignment="Center" Width="100" x:Name="FilterCombobox" SelectionChanged="FilterCombobox_OnSelectionChanged">
+                   <ComboBoxItem Content="All" x:Name="DiscountAll"/>
+                   <ComboBoxItem Content="0/5%" x:Name="Discount0"/>
+                   <ComboBoxItem Content="5%/15%" x:Name="Discount5"/>
+                   <ComboBoxItem Content="15%/30%" x:Name="Discount15"/>
+                   <ComboBoxItem Content="30%/70%" x:Name="Discount30"/>
+                   <ComboBoxItem Content="70%/100%" x:Name="Discount70"/>
+               </ComboBox>
+           </StackPanel>
+           <StackPanel
+               HorizontalAlignment="Center"
+               Orientation="Horizontal"  
+               DockPanel.Dock="Bottom" Height="40">
+               <TextBlock x:Name="CountServices"/>
+           </StackPanel>
+            <ListBox x:Name="ServiceListBox">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderBrush="Gray" BorderThickness="1" Padding="5">
+                            <Grid>
+                                <Image Source="{Binding Image}" Width="100" Height="100" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <TextBlock Text="{Binding Title}" TextWrapping="Wrap" TextAlignment="Center"/>
+                                    <TextBlock Text="{Binding CombinedCostDuration}" TextWrapping="Wrap" TextAlignment="Center" />
+                                    <TextBlock Text="{Binding FormattedDiscount}" TextWrapping="Wrap" TextAlignment="Center"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+       </DockPanel>
+</Window>

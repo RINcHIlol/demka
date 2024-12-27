@@ -1,0 +1,36 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="demo2.CheckAppointment"
+        x:CompileBindings="False"
+        Title="CheckAppointment">
+        <DockPanel>
+           <StackPanel 
+               HorizontalAlignment="Center"
+               Orientation="Horizontal"
+               DockPanel.Dock="Top" 
+               Spacing="10"
+               Height="50">
+               <TextBlock Width="200" Text="Ближайшие записи"/>
+           </StackPanel>
+           <ListBox x:Name="ProductListBox">
+               <ListBox.ItemsPanel>
+               </ListBox.ItemsPanel>
+               <ListBox.ItemTemplate>
+                   <DataTemplate>
+                       <Border BorderBrush="Gray" BorderThickness="1" Padding="5">
+                           <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                   <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                       <TextBlock Text="{Binding ServiceName}" TextWrapping="Wrap" TextAlignment="Center"/>
+                                       <TextBlock Text="{Binding ClientName}" TextWrapping="Wrap" TextAlignment="Center" />
+                                       <TextBlock Text="{Binding Starttime}" TextWrapping="Wrap" TextAlignment="Center"/>
+                                   </StackPanel>
+                           </StackPanel>
+                       </Border>
+                   </DataTemplate>
+               </ListBox.ItemTemplate>
+           </ListBox>
+       </DockPanel>
+</Window>

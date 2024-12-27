@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="demo2/AddAndEditProduct.axaml" value="demo2/demo2.csproj" />
+        <entry key="demo2/AddAndEditProductWindow.axaml" value="demo2/demo2.csproj" />
+        <entry key="demo2/AdminWindow.axaml" value="demo2/demo2.csproj" />
+        <entry key="demo2/Appointment.axaml" value="demo2/demo2.csproj" />
+        <entry key="demo2/CheckAppointment.axaml" value="demo2/demo2.csproj" />
+        <entry key="demo2/DeleteWindow.axaml" value="demo2/demo2.csproj" />
+        <entry key="demo2/GuestWindow.axaml" value="demo2/demo2.csproj" />
+        <entry key="demo2/MainWindow.axaml" value="demo2/demo2.csproj" />
+        <entry key="demo2/appointment.axaml" value="demo2/demo2.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
